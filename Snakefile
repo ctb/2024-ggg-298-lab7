@@ -1,4 +1,9 @@
-SAMPLES=['a', 'b', 'c']
+#SAMPLES=['a', 'b', 'c']
+
+FILES=glob_wildcards("{sample}.fa.gz")
+
+SAMPLES=FILES.sample
+print("SAMPLES is", SAMPLES)
 
 # default rule - make a comparison matrix
 rule FOO:
