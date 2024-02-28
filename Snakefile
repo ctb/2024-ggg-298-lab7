@@ -1,4 +1,4 @@
-rule all:
+rule FOO:
    input:
       "sulfo.cmp.matrix.png"
       
