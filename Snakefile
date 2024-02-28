@@ -1,3 +1,4 @@
+# default rule - make a comparison matrix
 rule FOO:
    input:
       "sulfo.cmp.matrix.png"
