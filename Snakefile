@@ -1,3 +1,7 @@
+rule all:
+   input:
+      "sulfo.cmp.matrix.png"
+
 rule rule_1:
   input: "a.fa.gz"
   output: "a.sig.zip"
