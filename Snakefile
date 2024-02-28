@@ -2,7 +2,8 @@
 rule FOO:
    input:
       "sulfo.cmp.matrix.png"
-      
+
+# sketch individual genomes
 rule rule_1:
   input: "{name}.fa.gz"
   output: "{name}.sig.zip"
