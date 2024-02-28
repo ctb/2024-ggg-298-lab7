@@ -1,3 +1,5 @@
+SAMPLES=['a', 'b', 'c']
+
 # default rule - make a comparison matrix
 rule FOO:
    input:
@@ -10,9 +12,9 @@ rule rule_1:
   shell: "sourmash sketch dna {input} -o {output} --name {wildcards.name}"
 
 rule rule_4:
-  input: "a.sig.zip", "b.sig.zip", "c.sig.zip"
+  input: expand("{filename}.sig.zip", filename=SAMPLES)
   output: "sulfo.cmp", "sulfo.cmp.labels.txt"
-  shell: "sourmash compare *.sig.zip -o sulfo.cmp"
+  shell: "sourmash compare {input} -o sulfo.cmp"
   
 rule rule_5:
   input: "sulfo.cmp", "sulfo.cmp.labels.txt"
